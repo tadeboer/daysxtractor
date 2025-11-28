@@ -15,7 +15,7 @@ from .data import *
 # @return Data with the time series.
 def parseFile(filePath, with_units=False):
     # Open excel
-    tic = time.perf_counter()
+    tic = time.clock()
     data = Data()
     workbook = xlrd.open_workbook(filePath, on_demand=True)
     sheet = workbook.sheet_by_index(0)
@@ -77,7 +77,7 @@ def parseFile(filePath, with_units=False):
         data.labels[p].average /= sheet.nrows-2
 
     # Print what has been read
-    toc = time.perf_counter()
+    toc = time.clock()
     print("Data for %s days read in %.2f seconds.\nLabels:" % (len(data.days()), toc-tic))
     for l in data.labels:
         print("\t%s: min=%.2f, average=%.2f, max=%.2f" % (l.name, l.min, l.average, l.max))

@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: daysxtractor
+Version: 2.0.0
+Summary: Extract a given number of representative days of a set of time series.
+Home-page: https://github.com/sebMathieu/daysxtractor
+Author: Sebastien Mathieu
+License-File: LICENSE
+Requires-Dist: pyomo
+Requires-Dist: xlrd
+Requires-Dist: xlwt
+Requires-Dist: python-dateutil
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
